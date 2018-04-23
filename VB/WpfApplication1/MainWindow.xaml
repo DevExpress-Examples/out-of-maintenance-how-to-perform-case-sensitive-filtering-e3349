@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
+    <Grid>
+        <dxg:GridControl HorizontalAlignment="Left" Name="gridControl1" VerticalAlignment="Top" AutoPopulateColumns="True" CustomRowFilter="gridControl1_CustomRowFilter" Height="282">
+
+            <dxg:GridControl.View>
+                <dxg:TableView Name="tableView1" ShowAutoFilterRow="true" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <dxe:CheckEdit HorizontalAlignment="Right" Margin="0,288,109,0" Content="Use Case Sensitive filtering" Name="checkEdit1" VerticalAlignment="Top" Width="150" EditValueChanged="checkEdit1_EditValueChanged" />
+    </Grid>
+</Window>
