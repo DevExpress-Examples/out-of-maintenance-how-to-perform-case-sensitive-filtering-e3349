@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -23,13 +22,30 @@ Namespace WpfApplication1
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 			Dim coll As New ObservableCollection(Of MyObj)()
-			coll.Add(New MyObj() With {.Text = "A", .Number = 1, .Group = "A"})
-			coll.Add(New MyObj() With {.Text = "a", .Number = 2, .Group = "A"})
-			coll.Add(New MyObj() With {.Text = "a", .Number = 3, .Group = "B"})
-			coll.Add(New MyObj() With {.Text = "B", .Number = 4, .Group = "B"})
+			coll.Add(New MyObj() With {
+				.Text = "A",
+				.Number = 1,
+				.Group = "A"
+			})
+			coll.Add(New MyObj() With {
+				.Text = "a",
+				.Number = 2,
+				.Group = "A"
+			})
+			coll.Add(New MyObj() With {
+				.Text = "a",
+				.Number = 3,
+				.Group = "B"
+			})
+			coll.Add(New MyObj() With {
+				.Text = "B",
+				.Number = 4,
+				.Group = "B"
+			})
 			gridControl1.ItemsSource = coll
 		End Sub
 
